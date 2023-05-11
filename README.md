@@ -8,6 +8,16 @@ A try to reproduce the famous Simon game using the Godot engine, Visual Script o
 
 All notable changes to this project will be documented here.
 
+## [0.2]
+
+### Added
+
+New Main Menu scene.
+
+### Changed
+
+Rearranged all scripts in their own folder, the same goes for scenes, assets and themes.
+
 ## [0.1]
 
 ### Fixed
