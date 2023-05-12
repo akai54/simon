@@ -8,7 +8,7 @@ A try to reproduce the famous Simon game using the Godot engine, Visual Script o
 
 All notable changes to this project will be documented here.
 
-## [0.2]
+## [0.3]
 
 ### Changed
 
