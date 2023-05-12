@@ -10,6 +10,17 @@ All notable changes to this project will be documented here.
 
 ## [0.2]
 
+### Changed
+
+Changed modes names to the ones planned.
+
+### fixed
+
+- Fix: list_immutable wasn't cleared at each create_array call.
+- Fix: score wasn't updated after replaying.
+
+## [0.2]
+
 ### Added
 
 New Main Menu scene.
