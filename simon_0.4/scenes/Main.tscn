@@ -1,0 +1,173 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://assets/sprites/couleurs.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/gris.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Main.vs" type="Script" id=3]
+[ext_resource path="res://assets/sprites/yellow.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/blue.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/green.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/red.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/button_blue.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/background.png" type="Texture" id=9]
+[ext_resource path="res://sons/vert.wav" type="AudioStream" id=10]
+[ext_resource path="res://sons/jaune.wav" type="AudioStream" id=11]
+[ext_resource path="res://sons/rouge.wav" type="AudioStream" id=12]
+[ext_resource path="res://sons/bleu.wav" type="AudioStream" id=13]
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 128, 128 )
+margin_right = 30.0533
+margin_bottom = 0.364742
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 10, 10 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 20, 0, 10, 10 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 30, 0, 10, 10 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), ExtResource( 8 ), SubResource( 3 ), SubResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1168.0
+margin_bottom = 717.0
+texture = ExtResource( 9 )
+stretch_mode = 7
+
+[node name="Jaune" type="Button" parent="."]
+margin_left = 178.0
+margin_top = 354.0
+margin_right = 315.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 7 )
+custom_styles/normal = SubResource( 6 )
+
+[node name="Bleu" type="Button" parent="."]
+margin_left = 321.0
+margin_top = 352.0
+margin_right = 458.0
+margin_bottom = 458.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+
+[node name="Rouge" type="Button" parent="."]
+margin_left = 320.0
+margin_top = 242.0
+margin_right = 457.0
+margin_bottom = 348.0
+custom_styles/hover = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+
+[node name="Vert" type="Button" parent="."]
+margin_left = 178.0
+margin_top = 242.0
+margin_right = 315.0
+margin_bottom = 348.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/normal = SubResource( 10 )
+
+[node name="Play" type="Button" parent="."]
+margin_left = 569.0
+margin_top = 248.0
+margin_right = 607.0
+margin_bottom = 268.0
+text = "Play"
+
+[node name="sequence" type="Label" parent="."]
+margin_left = 233.0
+margin_top = 43.0
+margin_right = 413.0
+margin_bottom = 65.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 315, 128 )
+scale = Vector2( 9.375, 8.675 )
+frames = SubResource( 5 )
+
+[node name="Score_value" type="Label" parent="."]
+margin_left = 246.0
+margin_top = 186.0
+margin_right = 286.0
+margin_bottom = 200.0
+text = "4"
+
+[node name="Score2" type="Label" parent="."]
+margin_left = 195.0
+margin_top = 186.0
+margin_right = 235.0
+margin_bottom = 200.0
+text = "Score"
+
+[node name="result" type="Label" parent="."]
+margin_left = 299.0
+margin_top = 210.0
+margin_right = 339.0
+margin_bottom = 224.0
+
+[node name="son_red" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="son_bleue" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="son_jaune" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="son_vert" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[connection signal="pressed" from="Jaune" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="Bleu" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Rouge" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Vert" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
