@@ -8,6 +8,21 @@ A try to reproduce the famous Simon game using the Godot engine, Visual Script o
 
 All notable changes to this project will be documented here.
 
+## [0.4]
+
+### Added
+
+- New Background image
+- Sounds for buttons
+
+### Changed
+
+- Labels names became more significant, like (label -> score_value).
+- Blue color changed into a more cyan one.
+- No more need to show color name after pressing the button.
+- Buttons became colored with the corresponding ones instead of just text.
+- score_value only contain the value, no more passing other info into the same string.
+
 ## [0.3]
 
 ### Changed
