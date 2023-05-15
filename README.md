@@ -8,6 +8,23 @@ A try to reproduce the famous Simon game using the Godot engine, Visual Script o
 
 All notable changes to this project will be documented here.
 
+## [0.5]
+
+### Added
+
+- New buttons colors and border.
+- Red background image when user chooses the wrong color.
+- New end_game function instead of repeating same blocks for each button.
+- Toggle_buttons new function to disable buttons.
+
+### Changed
+
+- Changed buttons pressed functions names into more meaningful ones
+  (\_on_button1_pressed => \_on_jaune_pressed)
+- Removed the texture rectangle and now the sequence plays directly on the buttons.
+- refactored the whole main script and now it's more organised and easy to walk through.
+- Changed the shown sentence after losing the sequence.
+
 ## [0.4]
 
 ### Added
